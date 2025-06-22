@@ -221,8 +221,8 @@ class ApiClientGenerator {
 
         final requestBody = <Parameter>[];
         final content = method.value.requestBody?.content ?? {};
-
-        for (final entry in content.entries) {
+        final entry = content.entries.firstOrNull;
+        if (entry != null) {
           switch (entry.key) {
             case OpenApiContentType.applicationJson:
             case OpenApiContentType.applicationXWwwFormUrlencoded:
