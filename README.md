@@ -126,6 +126,7 @@ swagger_to_dart:
     support_generic_arguments: true
     union_class_fallback_name: fallback
     enum_fallback_type: first
+    disable_enum_generation: false
   api_client:
     base_api_client_class_name: BaseApiClient
     use_class_for_query_parameters: true

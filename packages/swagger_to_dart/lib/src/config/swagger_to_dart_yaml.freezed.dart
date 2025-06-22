@@ -189,6 +189,7 @@ mixin _$ModelConfig {
   bool get supportGenericArguments;
   String? get unionClassFallbackName;
   EnumFallbackType get enumFallbackType;
+  bool get disableEnumGeneration;
 
   /// Create a copy of ModelConfig
   /// with the given fields replaced by the non-null parameter values.
@@ -211,17 +212,19 @@ mixin _$ModelConfig {
             (identical(other.unionClassFallbackName, unionClassFallbackName) ||
                 other.unionClassFallbackName == unionClassFallbackName) &&
             (identical(other.enumFallbackType, enumFallbackType) ||
-                other.enumFallbackType == enumFallbackType));
+                other.enumFallbackType == enumFallbackType) &&
+            (identical(other.disableEnumGeneration, disableEnumGeneration) ||
+                other.disableEnumGeneration == disableEnumGeneration));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, supportGenericArguments,
-      unionClassFallbackName, enumFallbackType);
+      unionClassFallbackName, enumFallbackType, disableEnumGeneration);
 
   @override
   String toString() {
-    return 'ModelConfig(supportGenericArguments: $supportGenericArguments, unionClassFallbackName: $unionClassFallbackName, enumFallbackType: $enumFallbackType)';
+    return 'ModelConfig(supportGenericArguments: $supportGenericArguments, unionClassFallbackName: $unionClassFallbackName, enumFallbackType: $enumFallbackType, disableEnumGeneration: $disableEnumGeneration)';
   }
 }
 
@@ -234,7 +237,8 @@ abstract mixin class $ModelConfigCopyWith<$Res> {
   $Res call(
       {bool supportGenericArguments,
       String? unionClassFallbackName,
-      EnumFallbackType enumFallbackType});
+      EnumFallbackType enumFallbackType,
+      bool disableEnumGeneration});
 }
 
 /// @nodoc
@@ -252,6 +256,7 @@ class _$ModelConfigCopyWithImpl<$Res> implements $ModelConfigCopyWith<$Res> {
     Object? supportGenericArguments = null,
     Object? unionClassFallbackName = freezed,
     Object? enumFallbackType = null,
+    Object? disableEnumGeneration = null,
   }) {
     return _then(_self.copyWith(
       supportGenericArguments: null == supportGenericArguments
@@ -266,6 +271,10 @@ class _$ModelConfigCopyWithImpl<$Res> implements $ModelConfigCopyWith<$Res> {
           ? _self.enumFallbackType
           : enumFallbackType // ignore: cast_nullable_to_non_nullable
               as EnumFallbackType,
+      disableEnumGeneration: null == disableEnumGeneration
+          ? _self.disableEnumGeneration
+          : disableEnumGeneration // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -277,7 +286,8 @@ class _ModelConfig extends ModelConfig {
   const _ModelConfig(
       {this.supportGenericArguments = false,
       this.unionClassFallbackName,
-      this.enumFallbackType = EnumFallbackType.unknown})
+      this.enumFallbackType = EnumFallbackType.unknown,
+      this.disableEnumGeneration = false})
       : super._();
   factory _ModelConfig.fromJson(Map<String, dynamic> json) =>
       _$ModelConfigFromJson(json);
@@ -290,6 +300,9 @@ class _ModelConfig extends ModelConfig {
   @override
   @JsonKey()
   final EnumFallbackType enumFallbackType;
+  @override
+  @JsonKey()
+  final bool disableEnumGeneration;
 
   /// Create a copy of ModelConfig
   /// with the given fields replaced by the non-null parameter values.
@@ -317,17 +330,19 @@ class _ModelConfig extends ModelConfig {
             (identical(other.unionClassFallbackName, unionClassFallbackName) ||
                 other.unionClassFallbackName == unionClassFallbackName) &&
             (identical(other.enumFallbackType, enumFallbackType) ||
-                other.enumFallbackType == enumFallbackType));
+                other.enumFallbackType == enumFallbackType) &&
+            (identical(other.disableEnumGeneration, disableEnumGeneration) ||
+                other.disableEnumGeneration == disableEnumGeneration));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, supportGenericArguments,
-      unionClassFallbackName, enumFallbackType);
+      unionClassFallbackName, enumFallbackType, disableEnumGeneration);
 
   @override
   String toString() {
-    return 'ModelConfig(supportGenericArguments: $supportGenericArguments, unionClassFallbackName: $unionClassFallbackName, enumFallbackType: $enumFallbackType)';
+    return 'ModelConfig(supportGenericArguments: $supportGenericArguments, unionClassFallbackName: $unionClassFallbackName, enumFallbackType: $enumFallbackType, disableEnumGeneration: $disableEnumGeneration)';
   }
 }
 
@@ -342,7 +357,8 @@ abstract mixin class _$ModelConfigCopyWith<$Res>
   $Res call(
       {bool supportGenericArguments,
       String? unionClassFallbackName,
-      EnumFallbackType enumFallbackType});
+      EnumFallbackType enumFallbackType,
+      bool disableEnumGeneration});
 }
 
 /// @nodoc
@@ -360,6 +376,7 @@ class __$ModelConfigCopyWithImpl<$Res> implements _$ModelConfigCopyWith<$Res> {
     Object? supportGenericArguments = null,
     Object? unionClassFallbackName = freezed,
     Object? enumFallbackType = null,
+    Object? disableEnumGeneration = null,
   }) {
     return _then(_ModelConfig(
       supportGenericArguments: null == supportGenericArguments
@@ -374,6 +391,10 @@ class __$ModelConfigCopyWithImpl<$Res> implements _$ModelConfigCopyWith<$Res> {
           ? _self.enumFallbackType
           : enumFallbackType // ignore: cast_nullable_to_non_nullable
               as EnumFallbackType,
+      disableEnumGeneration: null == disableEnumGeneration
+          ? _self.disableEnumGeneration
+          : disableEnumGeneration // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }

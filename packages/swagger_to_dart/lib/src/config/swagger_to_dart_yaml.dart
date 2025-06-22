@@ -60,6 +60,7 @@ abstract class ModelConfig with _$ModelConfig {
     @Default(false) bool supportGenericArguments,
     String? unionClassFallbackName,
     @Default(EnumFallbackType.unknown) EnumFallbackType enumFallbackType,
+    @Default(false) bool disableEnumGeneration,
   }) = _ModelConfig;
 
   factory ModelConfig.fromJson(Map<String, dynamic> json) =>

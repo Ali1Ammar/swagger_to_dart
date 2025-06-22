@@ -1,5 +1,6 @@
 import 'package:code_builder/code_builder.dart';
 import 'package:swagger_to_dart/src/generator/library_generator.dart';
+import 'package:swagger_to_dart/src/generator/model/strategy/disabled_enum_model_generator_strategy.dart';
 import 'package:swagger_to_dart/src/generator/model/strategy/enum_model_generator_strategy.dart';
 import 'package:swagger_to_dart/src/generator/model/strategy/model_generator_strategy.dart';
 import 'package:swagger_to_dart/src/schema/openapi/openapi.dart';
@@ -18,7 +19,11 @@ class ModelGenerator extends LibraryGenerator {
     final ModelGeneratorStrategy strategy;
 
     if (schema.enum_ != null) {
-      strategy = EnumModelGeneratorStrategy(context);
+      if (context.config.model.disableEnumGeneration) {
+        strategy = DisabledEnumModelGeneratorStrategy(context);
+      } else {
+        strategy = EnumModelGeneratorStrategy(context);
+      }
     } else {
       strategy = RegularModelGeneratorStrategy(context);
     }
