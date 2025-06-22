@@ -9,6 +9,7 @@ swagger_to_dart:
     support_generic_arguments: true
     union_class_fallback_name: fallback
     enum_fallback_type: first
+    disable_enum_generation: false  # Set to true to disable enum generation and use Object typedef instead
   api_client:
     base_api_client_class_name: CustomApiClient
     use_class_for_query_parameters: true
