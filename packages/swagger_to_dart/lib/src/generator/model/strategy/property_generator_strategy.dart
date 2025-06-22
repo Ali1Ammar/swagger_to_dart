@@ -22,6 +22,9 @@ class PropertyGeneratorStrategy extends GeneratorStrategy {
       overrideTypes: overrideTypes,
     );
 
+    // Determine if the type should be nullable
+    final shouldBeNullable = context.config.model.alwaysNullableTypes;
+
     return Parameter(
       (b) => b
         ..docs.add('/// $name')
@@ -32,7 +35,7 @@ class PropertyGeneratorStrategy extends GeneratorStrategy {
           refer('JsonKey(name: $className.${name}Key)'),
         ])
         ..name = name
-        ..type = refer(dartType),
+        ..type = refer(shouldBeNullable ? '$dartType?' : dartType),
     );
   }
 }

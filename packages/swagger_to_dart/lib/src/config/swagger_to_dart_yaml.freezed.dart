@@ -190,6 +190,7 @@ mixin _$ModelConfig {
   String? get unionClassFallbackName;
   EnumFallbackType get enumFallbackType;
   bool get disableEnumGeneration;
+  bool get alwaysNullableTypes;
 
   /// Create a copy of ModelConfig
   /// with the given fields replaced by the non-null parameter values.
@@ -214,17 +215,24 @@ mixin _$ModelConfig {
             (identical(other.enumFallbackType, enumFallbackType) ||
                 other.enumFallbackType == enumFallbackType) &&
             (identical(other.disableEnumGeneration, disableEnumGeneration) ||
-                other.disableEnumGeneration == disableEnumGeneration));
+                other.disableEnumGeneration == disableEnumGeneration) &&
+            (identical(other.alwaysNullableTypes, alwaysNullableTypes) ||
+                other.alwaysNullableTypes == alwaysNullableTypes));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, supportGenericArguments,
-      unionClassFallbackName, enumFallbackType, disableEnumGeneration);
+  int get hashCode => Object.hash(
+      runtimeType,
+      supportGenericArguments,
+      unionClassFallbackName,
+      enumFallbackType,
+      disableEnumGeneration,
+      alwaysNullableTypes);
 
   @override
   String toString() {
-    return 'ModelConfig(supportGenericArguments: $supportGenericArguments, unionClassFallbackName: $unionClassFallbackName, enumFallbackType: $enumFallbackType, disableEnumGeneration: $disableEnumGeneration)';
+    return 'ModelConfig(supportGenericArguments: $supportGenericArguments, unionClassFallbackName: $unionClassFallbackName, enumFallbackType: $enumFallbackType, disableEnumGeneration: $disableEnumGeneration, alwaysNullableTypes: $alwaysNullableTypes)';
   }
 }
 
@@ -238,7 +246,8 @@ abstract mixin class $ModelConfigCopyWith<$Res> {
       {bool supportGenericArguments,
       String? unionClassFallbackName,
       EnumFallbackType enumFallbackType,
-      bool disableEnumGeneration});
+      bool disableEnumGeneration,
+      bool alwaysNullableTypes});
 }
 
 /// @nodoc
@@ -257,6 +266,7 @@ class _$ModelConfigCopyWithImpl<$Res> implements $ModelConfigCopyWith<$Res> {
     Object? unionClassFallbackName = freezed,
     Object? enumFallbackType = null,
     Object? disableEnumGeneration = null,
+    Object? alwaysNullableTypes = null,
   }) {
     return _then(_self.copyWith(
       supportGenericArguments: null == supportGenericArguments
@@ -275,6 +285,10 @@ class _$ModelConfigCopyWithImpl<$Res> implements $ModelConfigCopyWith<$Res> {
           ? _self.disableEnumGeneration
           : disableEnumGeneration // ignore: cast_nullable_to_non_nullable
               as bool,
+      alwaysNullableTypes: null == alwaysNullableTypes
+          ? _self.alwaysNullableTypes
+          : alwaysNullableTypes // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -287,7 +301,8 @@ class _ModelConfig extends ModelConfig {
       {this.supportGenericArguments = false,
       this.unionClassFallbackName,
       this.enumFallbackType = EnumFallbackType.unknown,
-      this.disableEnumGeneration = false})
+      this.disableEnumGeneration = false,
+      this.alwaysNullableTypes = false})
       : super._();
   factory _ModelConfig.fromJson(Map<String, dynamic> json) =>
       _$ModelConfigFromJson(json);
@@ -303,6 +318,9 @@ class _ModelConfig extends ModelConfig {
   @override
   @JsonKey()
   final bool disableEnumGeneration;
+  @override
+  @JsonKey()
+  final bool alwaysNullableTypes;
 
   /// Create a copy of ModelConfig
   /// with the given fields replaced by the non-null parameter values.
@@ -332,17 +350,24 @@ class _ModelConfig extends ModelConfig {
             (identical(other.enumFallbackType, enumFallbackType) ||
                 other.enumFallbackType == enumFallbackType) &&
             (identical(other.disableEnumGeneration, disableEnumGeneration) ||
-                other.disableEnumGeneration == disableEnumGeneration));
+                other.disableEnumGeneration == disableEnumGeneration) &&
+            (identical(other.alwaysNullableTypes, alwaysNullableTypes) ||
+                other.alwaysNullableTypes == alwaysNullableTypes));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, supportGenericArguments,
-      unionClassFallbackName, enumFallbackType, disableEnumGeneration);
+  int get hashCode => Object.hash(
+      runtimeType,
+      supportGenericArguments,
+      unionClassFallbackName,
+      enumFallbackType,
+      disableEnumGeneration,
+      alwaysNullableTypes);
 
   @override
   String toString() {
-    return 'ModelConfig(supportGenericArguments: $supportGenericArguments, unionClassFallbackName: $unionClassFallbackName, enumFallbackType: $enumFallbackType, disableEnumGeneration: $disableEnumGeneration)';
+    return 'ModelConfig(supportGenericArguments: $supportGenericArguments, unionClassFallbackName: $unionClassFallbackName, enumFallbackType: $enumFallbackType, disableEnumGeneration: $disableEnumGeneration, alwaysNullableTypes: $alwaysNullableTypes)';
   }
 }
 
@@ -358,7 +383,8 @@ abstract mixin class _$ModelConfigCopyWith<$Res>
       {bool supportGenericArguments,
       String? unionClassFallbackName,
       EnumFallbackType enumFallbackType,
-      bool disableEnumGeneration});
+      bool disableEnumGeneration,
+      bool alwaysNullableTypes});
 }
 
 /// @nodoc
@@ -377,6 +403,7 @@ class __$ModelConfigCopyWithImpl<$Res> implements _$ModelConfigCopyWith<$Res> {
     Object? unionClassFallbackName = freezed,
     Object? enumFallbackType = null,
     Object? disableEnumGeneration = null,
+    Object? alwaysNullableTypes = null,
   }) {
     return _then(_ModelConfig(
       supportGenericArguments: null == supportGenericArguments
@@ -394,6 +421,10 @@ class __$ModelConfigCopyWithImpl<$Res> implements _$ModelConfigCopyWith<$Res> {
       disableEnumGeneration: null == disableEnumGeneration
           ? _self.disableEnumGeneration
           : disableEnumGeneration // ignore: cast_nullable_to_non_nullable
+              as bool,
+      alwaysNullableTypes: null == alwaysNullableTypes
+          ? _self.alwaysNullableTypes
+          : alwaysNullableTypes // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }

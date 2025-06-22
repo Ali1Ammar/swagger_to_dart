@@ -61,6 +61,7 @@ abstract class ModelConfig with _$ModelConfig {
     String? unionClassFallbackName,
     @Default(EnumFallbackType.unknown) EnumFallbackType enumFallbackType,
     @Default(false) bool disableEnumGeneration,
+    @Default(false) bool alwaysNullableTypes,
   }) = _ModelConfig;
 
   factory ModelConfig.fromJson(Map<String, dynamic> json) =>

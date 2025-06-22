@@ -39,6 +39,7 @@ _ModelConfig _$ModelConfigFromJson(Map<String, dynamic> json) => _ModelConfig(
               _$EnumFallbackTypeEnumMap, json['enum_fallback_type']) ??
           EnumFallbackType.unknown,
       disableEnumGeneration: json['disable_enum_generation'] as bool? ?? false,
+      alwaysNullableTypes: json['always_nullable_types'] as bool? ?? false,
     );
 
 const _$ModelConfigFieldMap = <String, String>{
@@ -46,6 +47,7 @@ const _$ModelConfigFieldMap = <String, String>{
   'unionClassFallbackName': 'union_class_fallback_name',
   'enumFallbackType': 'enum_fallback_type',
   'disableEnumGeneration': 'disable_enum_generation',
+  'alwaysNullableTypes': 'always_nullable_types',
 };
 
 abstract final class _$ModelConfigJsonKeys {
@@ -53,6 +55,7 @@ abstract final class _$ModelConfigJsonKeys {
   static const String unionClassFallbackName = 'union_class_fallback_name';
   static const String enumFallbackType = 'enum_fallback_type';
   static const String disableEnumGeneration = 'disable_enum_generation';
+  static const String alwaysNullableTypes = 'always_nullable_types';
 }
 
 // ignore: unused_element
@@ -66,6 +69,8 @@ abstract class _$ModelConfigPerFieldToJson {
       _$EnumFallbackTypeEnumMap[instance]!;
   // ignore: unused_element
   static Object? disableEnumGeneration(bool instance) => instance;
+  // ignore: unused_element
+  static Object? alwaysNullableTypes(bool instance) => instance;
 }
 
 Map<String, dynamic> _$ModelConfigToJson(_ModelConfig instance) =>
@@ -76,6 +81,7 @@ Map<String, dynamic> _$ModelConfigToJson(_ModelConfig instance) =>
       'enum_fallback_type':
           _$EnumFallbackTypeEnumMap[instance.enumFallbackType]!,
       'disable_enum_generation': instance.disableEnumGeneration,
+      'always_nullable_types': instance.alwaysNullableTypes,
     };
 
 const _$EnumFallbackTypeEnumMap = {
