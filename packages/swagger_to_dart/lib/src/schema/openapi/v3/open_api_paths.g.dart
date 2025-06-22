@@ -105,6 +105,10 @@ const _$OpenApiContentTypeEnumMap = {
   OpenApiContentType.applicationXWwwFormUrlencoded:
       'application/x-www-form-urlencoded',
   OpenApiContentType.multipartFormData: 'multipart/form-data',
+  OpenApiContentType.textPlain: 'text/plain',
+  OpenApiContentType.textJson: 'text/json',
+  OpenApiContentType.applicationJsonPatchJson: 'application/json-patch+json',
+  OpenApiContentType.applicationJsonPlusJson: 'application/*+json',
 };
 
 _OpenApiPathMethodRequestBody _$OpenApiPathMethodRequestBodyFromJson(

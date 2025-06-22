@@ -226,6 +226,10 @@ class ApiClientGenerator {
           switch (entry.key) {
             case OpenApiContentType.applicationJson:
             case OpenApiContentType.applicationXWwwFormUrlencoded:
+            case OpenApiContentType.textPlain:
+            case OpenApiContentType.textJson:
+            case OpenApiContentType.applicationJsonPatchJson:
+            case OpenApiContentType.applicationJsonPlusJson:
               requestBody.add(
                 Parameter(
                   (b) => b

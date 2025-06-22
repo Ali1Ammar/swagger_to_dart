@@ -11,7 +11,15 @@ enum OpenApiContentType {
   @JsonValue('application/x-www-form-urlencoded')
   applicationXWwwFormUrlencoded,
   @JsonValue('multipart/form-data')
-  multipartFormData;
+  multipartFormData,
+  @JsonValue('text/plain')
+  textPlain,
+  @JsonValue('text/json')
+  textJson,
+  @JsonValue('application/json-patch+json')
+  applicationJsonPatchJson,
+  @JsonValue('application/*+json')
+  applicationJsonPlusJson,
 }
 
 typedef OpenApiContent = Map<OpenApiContentType, OpenApiContentSchema>;
