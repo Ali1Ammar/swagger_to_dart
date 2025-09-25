@@ -427,9 +427,35 @@ class ApiClientGenerator {
       context.addModel(strategy.build(model));
     }
 
+    // Track processed header parameters to avoid duplicates
+    final processedHeaders = <String, OpenApiPathMethodParameter>{};
+    
     for (final p in parameters) {
       if (useClass && queryParameters.contains(p)) {
         continue;
+      }
+
+      // Handle duplicate header parameters
+      if (p.in_ == OpenApiPathMethodParameterType.header) {
+        if (processedHeaders.containsKey(p.name)) {
+          // Skip duplicate header parameter, but prefer the one with default value
+          final existing = processedHeaders[p.name]!;
+          final existingDefaultValue = context.extension.typeConverter.getDefaultValue(existing.schema);
+          final currentDefaultValue = context.extension.typeConverter.getDefaultValue(p.schema);
+          
+          // If current parameter has a default value and existing doesn't, replace it
+          if (currentDefaultValue != null && existingDefaultValue == null) {
+            // Remove the existing parameter from result
+            result.removeWhere((param) => 
+              param.name == Renaming.instance.renameProperty(existing.name));
+            processedHeaders[p.name] = p;
+          } else {
+            // Skip this duplicate parameter
+            continue;
+          }
+        } else {
+          processedHeaders[p.name] = p;
+        }
       }
 
       final dartType = context.extension.typeConverter.get(
