@@ -8,6 +8,8 @@ import 'package:pubspec_parse/pubspec_parse.dart';
 import 'package:swagger_to_dart/swagger_to_dart.dart';
 import 'package:yaml/yaml.dart';
 
+import '../utils/filter_content.dart';
+
 class GenerationContext {
   GenerationContext({
     required this.pubspec,
@@ -169,7 +171,9 @@ class GenerationContextBuilder {
           await file.writeAsString(jsonEncode(data));
         }
 
-        return OpenApi.fromJson(data);
+        // Filter unsupported content types before parsing
+        final filteredData = removeUnSupportedContent(data);
+        return OpenApi.fromJson(filteredData);
       } catch (e) {
         print('Error fetching OpenAPI spec from URL: $e');
       }
@@ -183,6 +187,8 @@ class GenerationContextBuilder {
     final content = await file.readAsString();
     final map = jsonDecode(content);
 
-    return OpenApi.fromJson(map);
+    // Filter unsupported content types before parsing
+    final filteredMap = removeUnSupportedContent(map);
+    return OpenApi.fromJson(filteredMap);
   }
 }
