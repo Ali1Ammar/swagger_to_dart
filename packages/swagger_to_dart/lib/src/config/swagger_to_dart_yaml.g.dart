@@ -103,6 +103,7 @@ _ApiClientConfig _$ApiClientConfigFromJson(Map<String, dynamic> json) =>
               ?.map((e) => e as String)
               .toList() ??
           const [],
+      allHeadersOptional: json['all_headers_optional'] as bool? ?? false,
     );
 
 const _$ApiClientConfigFieldMap = <String, String>{
@@ -110,6 +111,7 @@ const _$ApiClientConfigFieldMap = <String, String>{
   'useClassForQueryParameters': 'use_class_for_query_parameters',
   'useClassForMultipartFormData': 'use_class_for_multipart_form_data',
   'skippedParameters': 'skipped_parameters',
+  'allHeadersOptional': 'all_headers_optional',
 };
 
 abstract final class _$ApiClientConfigJsonKeys {
@@ -119,6 +121,7 @@ abstract final class _$ApiClientConfigJsonKeys {
   static const String useClassForMultipartFormData =
       'use_class_for_multipart_form_data';
   static const String skippedParameters = 'skipped_parameters';
+  static const String allHeadersOptional = 'all_headers_optional';
 }
 
 // ignore: unused_element
@@ -131,6 +134,8 @@ abstract class _$ApiClientConfigPerFieldToJson {
   static Object? useClassForMultipartFormData(bool instance) => instance;
   // ignore: unused_element
   static Object? skippedParameters(List<String> instance) => instance;
+  // ignore: unused_element
+  static Object? allHeadersOptional(bool instance) => instance;
 }
 
 Map<String, dynamic> _$ApiClientConfigToJson(_ApiClientConfig instance) =>
@@ -140,6 +145,7 @@ Map<String, dynamic> _$ApiClientConfigToJson(_ApiClientConfig instance) =>
       'use_class_for_multipart_form_data':
           instance.useClassForMultipartFormData,
       'skipped_parameters': instance.skippedParameters,
+      'all_headers_optional': instance.allHeadersOptional,
     };
 
 _SwaggerToDart _$SwaggerToDartFromJson(Map<String, dynamic> json) =>
