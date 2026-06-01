@@ -1,6 +1,5 @@
-// dart format width=80
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -88,6 +87,163 @@ class _$SwaggerToDartYamlCopyWithImpl<$Res>
     return $SwaggerToDartCopyWith<$Res>(_self.swaggerToDart, (value) {
       return _then(_self.copyWith(swaggerToDart: value));
     });
+  }
+}
+
+/// Adds pattern-matching-related methods to [SwaggerToDartYaml].
+extension SwaggerToDartYamlPatterns on SwaggerToDartYaml {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_SwaggerToDartYaml value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _SwaggerToDartYaml() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_SwaggerToDartYaml value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SwaggerToDartYaml():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_SwaggerToDartYaml value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SwaggerToDartYaml() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(SwaggerToDart swaggerToDart)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _SwaggerToDartYaml() when $default != null:
+        return $default(_that.swaggerToDart);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(SwaggerToDart swaggerToDart) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SwaggerToDartYaml():
+        return $default(_that.swaggerToDart);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(SwaggerToDart swaggerToDart)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SwaggerToDartYaml() when $default != null:
+        return $default(_that.swaggerToDart);
+      case _:
+        return null;
+    }
   }
 }
 
@@ -270,6 +426,172 @@ class _$ModelConfigCopyWithImpl<$Res> implements $ModelConfigCopyWith<$Res> {
   }
 }
 
+/// Adds pattern-matching-related methods to [ModelConfig].
+extension ModelConfigPatterns on ModelConfig {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_ModelConfig value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _ModelConfig() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_ModelConfig value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ModelConfig():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_ModelConfig value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ModelConfig() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(bool supportGenericArguments,
+            String? unionClassFallbackName, EnumFallbackType enumFallbackType)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _ModelConfig() when $default != null:
+        return $default(_that.supportGenericArguments,
+            _that.unionClassFallbackName, _that.enumFallbackType);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(bool supportGenericArguments,
+            String? unionClassFallbackName, EnumFallbackType enumFallbackType)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ModelConfig():
+        return $default(_that.supportGenericArguments,
+            _that.unionClassFallbackName, _that.enumFallbackType);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(bool supportGenericArguments,
+            String? unionClassFallbackName, EnumFallbackType enumFallbackType)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ModelConfig() when $default != null:
+        return $default(_that.supportGenericArguments,
+            _that.unionClassFallbackName, _that.enumFallbackType);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 
 @_jsonSerializable
@@ -384,6 +706,11 @@ mixin _$ApiClientConfig {
   bool get useClassForQueryParameters;
   List<String> get skippedParameters;
 
+  /// When true, all header parameters are generated as nullable and
+  /// non-required so callers can pass `null` (useful when headers are
+  /// injected globally via a Dio interceptor).
+  bool get allHeadersOptional;
+
   /// Create a copy of ApiClientConfig
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -407,7 +734,9 @@ mixin _$ApiClientConfig {
                 other.useClassForQueryParameters ==
                     useClassForQueryParameters) &&
             const DeepCollectionEquality()
-                .equals(other.skippedParameters, skippedParameters));
+                .equals(other.skippedParameters, skippedParameters) &&
+            (identical(other.allHeadersOptional, allHeadersOptional) ||
+                other.allHeadersOptional == allHeadersOptional));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -416,11 +745,12 @@ mixin _$ApiClientConfig {
       runtimeType,
       baseApiClientClassName,
       useClassForQueryParameters,
-      const DeepCollectionEquality().hash(skippedParameters));
+      const DeepCollectionEquality().hash(skippedParameters),
+      allHeadersOptional);
 
   @override
   String toString() {
-    return 'ApiClientConfig(baseApiClientClassName: $baseApiClientClassName, useClassForQueryParameters: $useClassForQueryParameters, skippedParameters: $skippedParameters)';
+    return 'ApiClientConfig(baseApiClientClassName: $baseApiClientClassName, useClassForQueryParameters: $useClassForQueryParameters, skippedParameters: $skippedParameters, allHeadersOptional: $allHeadersOptional)';
   }
 }
 
@@ -433,7 +763,8 @@ abstract mixin class $ApiClientConfigCopyWith<$Res> {
   $Res call(
       {String baseApiClientClassName,
       bool useClassForQueryParameters,
-      List<String> skippedParameters});
+      List<String> skippedParameters,
+      bool allHeadersOptional});
 }
 
 /// @nodoc
@@ -452,6 +783,7 @@ class _$ApiClientConfigCopyWithImpl<$Res>
     Object? baseApiClientClassName = null,
     Object? useClassForQueryParameters = null,
     Object? skippedParameters = null,
+    Object? allHeadersOptional = null,
   }) {
     return _then(_self.copyWith(
       baseApiClientClassName: null == baseApiClientClassName
@@ -466,7 +798,195 @@ class _$ApiClientConfigCopyWithImpl<$Res>
           ? _self.skippedParameters
           : skippedParameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      allHeadersOptional: null == allHeadersOptional
+          ? _self.allHeadersOptional
+          : allHeadersOptional // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [ApiClientConfig].
+extension ApiClientConfigPatterns on ApiClientConfig {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_ApiClientConfig value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _ApiClientConfig() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_ApiClientConfig value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ApiClientConfig():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_ApiClientConfig value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ApiClientConfig() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            String baseApiClientClassName,
+            bool useClassForQueryParameters,
+            List<String> skippedParameters,
+            bool allHeadersOptional)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _ApiClientConfig() when $default != null:
+        return $default(
+            _that.baseApiClientClassName,
+            _that.useClassForQueryParameters,
+            _that.skippedParameters,
+            _that.allHeadersOptional);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            String baseApiClientClassName,
+            bool useClassForQueryParameters,
+            List<String> skippedParameters,
+            bool allHeadersOptional)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ApiClientConfig():
+        return $default(
+            _that.baseApiClientClassName,
+            _that.useClassForQueryParameters,
+            _that.skippedParameters,
+            _that.allHeadersOptional);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            String baseApiClientClassName,
+            bool useClassForQueryParameters,
+            List<String> skippedParameters,
+            bool allHeadersOptional)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ApiClientConfig() when $default != null:
+        return $default(
+            _that.baseApiClientClassName,
+            _that.useClassForQueryParameters,
+            _that.skippedParameters,
+            _that.allHeadersOptional);
+      case _:
+        return null;
+    }
   }
 }
 
@@ -477,7 +997,8 @@ class _ApiClientConfig extends ApiClientConfig {
   const _ApiClientConfig(
       {this.baseApiClientClassName = 'BaseApiClient',
       this.useClassForQueryParameters = false,
-      final List<String> skippedParameters = const []})
+      final List<String> skippedParameters = const [],
+      this.allHeadersOptional = false})
       : _skippedParameters = skippedParameters,
         super._();
   factory _ApiClientConfig.fromJson(Map<String, dynamic> json) =>
@@ -498,6 +1019,13 @@ class _ApiClientConfig extends ApiClientConfig {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_skippedParameters);
   }
+
+  /// When true, all header parameters are generated as nullable and
+  /// non-required so callers can pass `null` (useful when headers are
+  /// injected globally via a Dio interceptor).
+  @override
+  @JsonKey()
+  final bool allHeadersOptional;
 
   /// Create a copy of ApiClientConfig
   /// with the given fields replaced by the non-null parameter values.
@@ -526,7 +1054,9 @@ class _ApiClientConfig extends ApiClientConfig {
                 other.useClassForQueryParameters ==
                     useClassForQueryParameters) &&
             const DeepCollectionEquality()
-                .equals(other._skippedParameters, _skippedParameters));
+                .equals(other._skippedParameters, _skippedParameters) &&
+            (identical(other.allHeadersOptional, allHeadersOptional) ||
+                other.allHeadersOptional == allHeadersOptional));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -535,11 +1065,12 @@ class _ApiClientConfig extends ApiClientConfig {
       runtimeType,
       baseApiClientClassName,
       useClassForQueryParameters,
-      const DeepCollectionEquality().hash(_skippedParameters));
+      const DeepCollectionEquality().hash(_skippedParameters),
+      allHeadersOptional);
 
   @override
   String toString() {
-    return 'ApiClientConfig(baseApiClientClassName: $baseApiClientClassName, useClassForQueryParameters: $useClassForQueryParameters, skippedParameters: $skippedParameters)';
+    return 'ApiClientConfig(baseApiClientClassName: $baseApiClientClassName, useClassForQueryParameters: $useClassForQueryParameters, skippedParameters: $skippedParameters, allHeadersOptional: $allHeadersOptional)';
   }
 }
 
@@ -554,7 +1085,8 @@ abstract mixin class _$ApiClientConfigCopyWith<$Res>
   $Res call(
       {String baseApiClientClassName,
       bool useClassForQueryParameters,
-      List<String> skippedParameters});
+      List<String> skippedParameters,
+      bool allHeadersOptional});
 }
 
 /// @nodoc
@@ -573,6 +1105,7 @@ class __$ApiClientConfigCopyWithImpl<$Res>
     Object? baseApiClientClassName = null,
     Object? useClassForQueryParameters = null,
     Object? skippedParameters = null,
+    Object? allHeadersOptional = null,
   }) {
     return _then(_ApiClientConfig(
       baseApiClientClassName: null == baseApiClientClassName
@@ -587,6 +1120,10 @@ class __$ApiClientConfigCopyWithImpl<$Res>
           ? _self._skippedParameters
           : skippedParameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      allHeadersOptional: null == allHeadersOptional
+          ? _self.allHeadersOptional
+          : allHeadersOptional // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -723,6 +1260,187 @@ class _$SwaggerToDartCopyWithImpl<$Res>
     return $ApiClientConfigCopyWith<$Res>(_self.apiClient, (value) {
       return _then(_self.copyWith(apiClient: value));
     });
+  }
+}
+
+/// Adds pattern-matching-related methods to [SwaggerToDart].
+extension SwaggerToDartPatterns on SwaggerToDart {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_SwaggerToDart value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _SwaggerToDart() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_SwaggerToDart value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SwaggerToDart():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_SwaggerToDart value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SwaggerToDart() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            String? url,
+            GenerationSource? generationSource,
+            String inputDirectory,
+            String outputDirectory,
+            ModelConfig model,
+            ApiClientConfig apiClient)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _SwaggerToDart() when $default != null:
+        return $default(_that.url, _that.generationSource, _that.inputDirectory,
+            _that.outputDirectory, _that.model, _that.apiClient);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            String? url,
+            GenerationSource? generationSource,
+            String inputDirectory,
+            String outputDirectory,
+            ModelConfig model,
+            ApiClientConfig apiClient)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SwaggerToDart():
+        return $default(_that.url, _that.generationSource, _that.inputDirectory,
+            _that.outputDirectory, _that.model, _that.apiClient);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            String? url,
+            GenerationSource? generationSource,
+            String inputDirectory,
+            String outputDirectory,
+            ModelConfig model,
+            ApiClientConfig apiClient)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SwaggerToDart() when $default != null:
+        return $default(_that.url, _that.generationSource, _that.inputDirectory,
+            _that.outputDirectory, _that.model, _that.apiClient);
+      case _:
+        return null;
+    }
   }
 }
 

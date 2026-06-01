@@ -382,14 +382,27 @@ class ApiClientGenerator {
         continue;
       }
 
-      final dartType = context.typeConverter.get(
+      var dartType = context.typeConverter.get(
         p.schema,
         className: className,
       );
 
-      final defaultValue = context.typeConverter.getDefaultValue(
+      var defaultValue = context.typeConverter.getDefaultValue(
         p.schema,
       );
+
+      final isHeaderLike = p.in_ == OpenApiPathMethodParameterType.header ||
+          p.in_ == OpenApiPathMethodParameterType.cookie;
+
+      final forceOptional =
+          isHeaderLike && context.config.apiClient.allHeadersOptional;
+
+      if (forceOptional) {
+        if (dartType != 'dynamic' && !dartType.endsWith('?')) {
+          dartType = '$dartType?';
+        }
+        defaultValue ??= 'null';
+      }
 
       result.add(
         Parameter(

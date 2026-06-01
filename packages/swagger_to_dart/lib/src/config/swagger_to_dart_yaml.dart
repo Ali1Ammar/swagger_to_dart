@@ -75,6 +75,10 @@ abstract class ApiClientConfig with _$ApiClientConfig {
     @Default('BaseApiClient') String baseApiClientClassName,
     @Default(false) bool useClassForQueryParameters,
     @Default([]) List<String> skippedParameters,
+    /// When true, all header parameters are generated as nullable and
+    /// non-required so callers can pass `null` (useful when headers are
+    /// injected globally via a Dio interceptor).
+    @Default(false) bool allHeadersOptional,
   }) = _ApiClientConfig;
 
   factory ApiClientConfig.fromJson(Map<String, dynamic> json) =>
