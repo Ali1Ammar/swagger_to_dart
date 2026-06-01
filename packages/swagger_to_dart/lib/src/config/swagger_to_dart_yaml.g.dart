@@ -89,12 +89,14 @@ _ApiClientConfig _$ApiClientConfigFromJson(Map<String, dynamic> json) =>
               ?.map((e) => e as String)
               .toList() ??
           const [],
+      allHeadersOptional: json['all_headers_optional'] as bool? ?? false,
     );
 
 const _$ApiClientConfigFieldMap = <String, String>{
   'baseApiClientClassName': 'base_api_client_class_name',
   'useClassForQueryParameters': 'use_class_for_query_parameters',
   'skippedParameters': 'skipped_parameters',
+  'allHeadersOptional': 'all_headers_optional',
 };
 
 abstract final class _$ApiClientConfigJsonKeys {
@@ -102,6 +104,7 @@ abstract final class _$ApiClientConfigJsonKeys {
   static const String useClassForQueryParameters =
       'use_class_for_query_parameters';
   static const String skippedParameters = 'skipped_parameters';
+  static const String allHeadersOptional = 'all_headers_optional';
 }
 
 // ignore: unused_element
@@ -112,6 +115,8 @@ abstract class _$ApiClientConfigPerFieldToJson {
   static Object? useClassForQueryParameters(bool instance) => instance;
   // ignore: unused_element
   static Object? skippedParameters(List<String> instance) => instance;
+  // ignore: unused_element
+  static Object? allHeadersOptional(bool instance) => instance;
 }
 
 Map<String, dynamic> _$ApiClientConfigToJson(_ApiClientConfig instance) =>
@@ -119,6 +124,7 @@ Map<String, dynamic> _$ApiClientConfigToJson(_ApiClientConfig instance) =>
       'base_api_client_class_name': instance.baseApiClientClassName,
       'use_class_for_query_parameters': instance.useClassForQueryParameters,
       'skipped_parameters': instance.skippedParameters,
+      'all_headers_optional': instance.allHeadersOptional,
     };
 
 _SwaggerToDart _$SwaggerToDartFromJson(Map<String, dynamic> json) =>
