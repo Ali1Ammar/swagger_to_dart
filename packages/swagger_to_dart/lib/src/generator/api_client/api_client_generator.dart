@@ -398,7 +398,7 @@ class ApiClientGenerator {
           isHeaderLike && context.config.apiClient.allHeadersOptional;
 
       if (forceOptional) {
-        if (!dartType.endsWith('?')) {
+        if (dartType != 'dynamic' && !dartType.endsWith('?')) {
           dartType = '$dartType?';
         }
         defaultValue ??= 'null';
